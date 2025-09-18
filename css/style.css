@@ -1,0 +1,83 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style-type: none; 
+}
+
+a { 
+    text-decoration: none; color: #000; 
+}
+
+body{
+    background-color: #948979;
+    padding: 2% 2.5% 2% 2.5%;
+}
+/*HEADER*/
+header{
+    background-color: rgb(34, 40, 49, 0.7)  ;
+    border-radius: 50px;
+    display: flex;
+}
+header .logo{
+    width: 13%;
+}
+header .logo a{
+
+    display: flex;
+    align-items: center;
+    padding: 1vw 1vh 1vw 4vh ;
+}
+header .logo a img{
+    align-content: center;
+    width: 70px;
+    height: 40px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;    
+    width: 74%;
+}
+header nav input{
+    background-color: #222831; 
+    color: white;            
+    border: 1px solid #3a3f44;
+    height: 40%;
+    margin-right: 1%;
+    padding: 1%;
+    border-radius: 10px;
+    width: 20%;
+}
+header nav button {
+    background-color: #222831; 
+    color: white;
+    padding: 0.2vw;
+    border-radius: 10px;
+    height: 40%;
+    border: none;
+    width: 5%;
+}
+
+header nav button:hover {
+    background-color: #4c5056; 
+    border-color: white;
+}
+
+header .menu{
+    width: 13%;
+    display: flex;
+    align-items: center;
+}
+header .menu a{
+    color: white;
+    padding: 2%;
+}   
+
+/*MAIN*/
+
+main .aleatorio{
+    background-color: rgb(34, 40, 49);
+}
