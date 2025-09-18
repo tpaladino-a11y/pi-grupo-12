@@ -2,22 +2,24 @@
     box-sizing: border-box; 
     margin: 0;
     padding: 0;
+    color: white;
 }
 li {
     list-style-type: none; 
 }
 
 a { 
-    text-decoration: none; color: #000; 
+    text-decoration: none;
 }
 
 body{
-    background-color: #948979;
+    background-image: url("../img/bg.png");
+    background-size: 100%;
     padding: 2% 2.5% 2% 2.5%;
 }
 /*HEADER*/
 header{
-    background-color: rgb(34, 40, 49, 0.7)  ;
+    background-color: rgb(34, 40, 49)  ;
     border-radius: 50px;
     display: flex;
 }
@@ -42,7 +44,7 @@ header nav {
     width: 74%;
 }
 header nav input{
-    background-color: #222831; 
+    background-color: rgb(34, 40, 49); 
     color: white;            
     border: 1px solid #3a3f44;
     height: 40%;
@@ -52,7 +54,7 @@ header nav input{
     width: 20%;
 }
 header nav button {
-    background-color: #222831; 
+    background-color: rgb(61, 61, 61); 
     color: white;
     padding: 0.2vw;
     border-radius: 10px;
@@ -79,5 +81,24 @@ header .menu a{
 /*MAIN*/
 
 main .aleatorio{
-    background-color: rgb(34, 40, 49);
+    background-color: rgb(34, 40, 49, 0.95);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .aleatorio h2{
+    text-align: center; 
+    width: 100%;
+    padding: 5%;
+    color: white;   
+}
+
+main .aleatorio .productos-a{
+    width: 18%;
+    background-color: rgb(34, 38, 44);
+    margin: 1%;
+}
+
+main .aleatorio .productos-a img{
+    width: 100%;
 }
