@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRO</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bodyregistro">
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="./img/logo.png" alt=""></a>
+        </div>
+        <nav>
+            <form class="search" action="search.html" method="get"></form>
+                <input type="text" name="q" placeholder="Buscar productos...">
+                <button type="submit">Buscar</button>
+        </nav>
+        <div class="menu">
+            <a href="registro.html">REGISTRO</a>
+            <a href="login.html">LOGIN</a>
+        </div>
+    </header>
+    <main class="mainregistro">
+        <h2>REGISTRO</h2>
+        <div class="registro">
+            <form action="results.html" method="get">
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email">
+                </div>
+                <div>
+                    <label for="contraseña">Contraseña:</label>
+                    <input type="password" name="contraseña">
+                </div>
+                <div>
+                    <label for="rep-contra">Repetir Contraseña:</label>
+                    <input type="password" name="rep-contra" id="rep-contra">
+                </div>
+               <div>
+                    <button type="submit">Registrarme</button><a href="./login.html"></a><button type="submit">Ya tengo cuenta</button>
+                </div>
+                <div>
+                    <label for="acep">Acepto terminos y condiciones</label>
+                    <input type="checkbox" name="acep" id="acep">
+                </div>
+            </form>  
+        </div>
+    </main>
+    <footer>
+        <p>Integrantes del grupo: Tomas Paladino, Teo Botindari y Facundo Martinez</p>
+    </footer>
+</body>
+</html>
+

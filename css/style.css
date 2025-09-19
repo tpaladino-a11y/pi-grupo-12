@@ -241,17 +241,26 @@ footer{
 
 /*REGISTRO*/
 
-.bodylogin{
-    background-image: url("../img/bg2.png");
+
+footer{
+    background-color: rgb(34, 40, 49) ;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 2% 2.5% 2% 2.5%;
 }
 
-.mainlogin h2{
+/*REGISTRO*/
+
+.bodyregistro {
+    background-image: url(../img/bg2.png);
+} 
+
+.mainregistro h2 {
     text-align: center;
 }
 
-.mainlogin{
+.mainregistro {
     margin: 0 30% 0 30%;
     padding: 3% 8% 3% 8%;
     background-color: rgba(37, 38, 45);
@@ -260,22 +269,101 @@ footer{
     flex-direction: column;
     border-radius: 15px;
 }
-.login{
+
+.registro {
     margin-top: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
-.login input, .login button {
+
+.registro input, 
+.registro button {
     width: 100%;
     padding: 5px;
     border: none;
     border-radius: 8px;
     outline: none;
-    font-size: 10px;
+    font-size: 12px;
+    color: black;
+    margin-top: 5px;
+}
+
+.registro label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.registro div {
+    margin-bottom: 12px;
+}
+
+.registro button {
+    background-color: rgb(61, 61, 61);
+    color: white;
+}
+
+.registro button:hover {
+    background-color: #4c5056;
+}
+
+.registro input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+/* Prodcutos */
+
+footer{
+    background-color: rgb(34, 40, 49) ;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*PRODUCTOS*/
+
+.bodyproductos {
+    background-image: url(../img/bg2.png);
+}
+
+.mainproductos h2 {
+    text-align: center;
     color: black;
 }
 
+.mainproductos .contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
+.mainproductos .descripcion-prod {
+    background-color: rgb(34, 38, 44);
+    border-radius: 15px;
+    padding: 32px;
+    max-width: 400px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.mainproductos .descripcion-prod img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 16px 0;
+}
+
+.mainproductos .reviews {
+    background-color: rgb(34, 38, 44);
+    padding: 24px;
+    border-radius: 12px;
+    max-width: 400px;
+    text-align: center;
+    color: white;
+}
