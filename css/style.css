@@ -18,14 +18,18 @@ a {
 }
 
 body{
-    background-color: #292f39;
-    padding: 2% 2.5% 2% 2.5%;
+    background-color: #3f4b5f;
+}
+main{
+    padding: 0 2.5% 2% 2.5%;
 }
 /*HEADER*/
 header{
+    margin: 2% 2.5% 0 2.5%;
     background-color: rgb(34, 40, 49)  ;
     border-radius: 50px;
     display: flex;
+
 }
 header .logo{
     width: 13%;
@@ -84,25 +88,45 @@ header .menu a{
 
 /*MAIN INDEX*/
 
+main .categorias ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2% 1% 2% 1%;
+    border-radius: 80px;
+    background-color: rgb(228, 228, 228); 
+    width: 20%;
+    height: 4vh;
+}
+
+main .categorias ul li a{
+    color: #2F3A4C;
+}
+
 main .container{
     display: flex;
     flex-wrap: wrap;
 
 }
 
-main .aleatorio h2{
+main .aleatorio .bannerAleatorio{
     text-align: center; 
-    font-weight: bold;
     align-content: center;
     width: 100%;
     padding: 5%;
-    color: white;   
     background-image: url("../img/banner1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 30vh;
     margin: 0 1% 0 1%;
 }
 
-main .masVendidos h2{
+main .aleatorio .bannerAleatorio h2{
+    font-weight: bold;
+    color: white;   
+}
+
+main .masVendidos .bannerVendidos{
     text-align: center; 
     font-weight: bold;
     align-content: center;
@@ -110,9 +134,17 @@ main .masVendidos h2{
     padding: 5%;
     color: white;   
     background-image: url("../img/banner2.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 30vh;
     margin: 0 1% 0 1%;
 }
+
+main .masVendidos .bannerVendidos h2{
+    font-weight: bold;
+    color: white;   
+}
+
 
 main .container .productos{
     width: 18%;
@@ -152,22 +184,32 @@ main .container .productos img{
 main .masVendidos{
     margin-top: 10vh;
 }
+/*LOGIN*/
 
-
+footer{
+    background-color: rgb(34, 40, 49) ;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /*LOGIN*/
 
 .bodylogin{
     background-image: url("../img/bg2.png");
-    align-items: center;
-    padding: 2% 2.5% 2% 2.5%;
-}
-
-.mainlogin h2{
-    text-align: center;
 }
 
 .mainlogin{
+    height: 80vh;
+    padding: 2% 2.5% 2% 2.5%;
+}
+
+.mainlogin .seccionlogin h2{
+    text-align: center;
+}
+
+.seccionlogin{
     margin: 0 30% 0 30%;
     padding: 3% 8% 3% 8%;
     background-color: rgba(37, 38, 45);
@@ -175,6 +217,7 @@ main .masVendidos{
     display: flex;
     flex-direction: column;
     border-radius: 15px;
+    
 }
 .login{
     margin-top: 5vh;
@@ -184,9 +227,11 @@ main .masVendidos{
     align-items: center;
     
 }
-.login input, .login button {
+
+.login input, .login .botonesLogin button {
     width: 100%;
     padding: 5px;
+    margin: 3%;
     border: none;
     border-radius: 8px;
     outline: none;
@@ -232,3 +277,5 @@ main .masVendidos{
     font-size: 10px;
     color: black;
 }
+
+
