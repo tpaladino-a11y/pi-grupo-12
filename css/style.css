@@ -194,3 +194,41 @@ main .masVendidos{
     color: black;
 }
 
+/*REGISTRO*/
+
+.bodylogin{
+    background-image: url("../img/bg2.png");
+    align-items: center;
+    padding: 2% 2.5% 2% 2.5%;
+}
+
+.mainlogin h2{
+    text-align: center;
+}
+
+.mainlogin{
+    margin: 0 30% 0 30%;
+    padding: 3% 8% 3% 8%;
+    background-color: rgba(37, 38, 45);
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+.login{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.login input, .login button {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 10px;
+    color: black;
+}
