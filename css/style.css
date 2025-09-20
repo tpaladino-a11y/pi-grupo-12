@@ -378,3 +378,63 @@ footer{
 .descripcion img{
     width: 20%;
 }
+
+
+/* CATEGORIAS */
+
+.categoriabuzos{
+    display: flex;
+}
+
+main .bannerbuzos{
+    text-align: center; 
+    font-weight: bold;
+    align-content: center;
+    width: 100%;
+    padding: 5%;
+    color: white;   
+    background-image: url("../img/banner4.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    margin: 1% 1% 1% 1%;
+}
+
+main .categoriabuzos .productoscategoria{
+    width: 18%;
+    background-color: rgb(34, 38, 44);
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+}
+main .categoriabuzos .productoscategoria .infobuzos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+main .categoriabuzos .productoscategoria .infobuzos h3{
+    padding: 4% 2% 2% 2%;
+}
+
+main .categoriabuzos .productoscategoria .infobuzos p{
+    padding: 2%;
+}
+
+main .categoriabuzos .productoscategoria .infobuzos a{
+    padding: 2%;
+    width: fit-content;
+    background-color: rgb(61, 61, 61); 
+    border-radius: 10px;
+    margin: 2% 0 2% 2%;
+}
+
+main .categoriabuzos .productoscategoria img{
+    width: 100%;
+    border-radius: 5px;
+    height: auto;
+}
+
+main .masVendidos{
+    margin-top: 10vh;
+}
