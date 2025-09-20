@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TwoJeys Registro</title>
+    <title>TwoJeys Login</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="bodyregistro">
+<body class="bodylogin">
     <header>
         <div class="logo">
             <a href="index.html"><img src="./img/logo.png" alt=""></a>
@@ -21,9 +21,9 @@
             <a href="login2.html">LOGIN</a>
         </div>
     </header>
-    <main class="mainregistro">
-        <h2>REGISTRO</h2>
-        <div class="registro">
+    <main class="mainlogin">
+        <h2>LOGIN</h2>
+        <div class="login">
             <form action="results.html" method="get">
                 <div>
                     <label for="email">Email:</label>
@@ -33,17 +33,11 @@
                     <label for="contraseña">Contraseña:</label>
                     <input type="password" name="contraseña">
                 </div>
-                <div>
-                    <label for="rep-contra">Repetir Contraseña:</label>
-                    <input type="password" name="rep-contra" id="rep-contra">
+                <div class="botonesLogin">
+                    <button type="submit"> Enviar </button>
+                    <a href="register.html"><button type="submit"> No tengo cuenta </button></a>
                 </div>
-               <div>
-                    <button type="submit">Registrarme</button><a href="./login.html"></a><button type="submit">Ya tengo cuenta</button>
-                </div>
-                <div>
-                    <label for="acep">Acepto terminos y condiciones</label>
-                    <input type="checkbox" name="acep" id="acep">
-                </div>
+                
             </form>  
         </div>
     </main>
@@ -52,4 +46,3 @@
     </footer>
 </body>
 </html>
-

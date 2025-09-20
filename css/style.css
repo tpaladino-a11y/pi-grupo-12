@@ -184,60 +184,6 @@ main .container .productos img{
 main .masVendidos{
     margin-top: 10vh;
 }
-/*LOGIN*/
-
-footer{
-    background-color: rgb(34, 40, 49) ;
-    height: 8vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/*LOGIN*/
-
-.bodylogin{
-    background-image: url("../img/bg2.png");
-}
-
-.mainlogin{
-    height: 80vh;
-    padding: 2% 2.5% 2% 2.5%;
-}
-
-.mainlogin .seccionlogin h2{
-    text-align: center;
-}
-
-.seccionlogin{
-    margin: 0 30% 0 30%;
-    padding: 3% 8% 3% 8%;
-    background-color: rgba(37, 38, 45);
-    margin-top: 5vh;
-    display: flex;
-    flex-direction: column;
-    border-radius: 15px;
-    
-}
-.login{
-    margin-top: 5vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.login input, .login .botonesLogin button {
-    width: 100%;
-    padding: 5px;
-    margin: 3%;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    font-size: 10px;
-    color: black;
-}
 
 /*REGISTRO*/
 
@@ -314,7 +260,7 @@ footer{
     margin-right: 5px;
 }
 
-/* Prodcutos */
+/* PRODUCTOS */
 
 footer{
     background-color: rgb(34, 40, 49) ;
@@ -324,50 +270,111 @@ footer{
     align-items: center;
 }
 
-/*PRODUCTOS*/
 
-.bodyproductos {
+
+/*LOGIN 2*/
+
+.bodylogin{
     background-image: url(../img/bg2.png);
-}
+} 
 
-.mainproductos h2 {
+.mainlogin h2 {
     text-align: center;
-    color: black;
 }
 
-.mainproductos .contenido {
+.mainlogin {
+    margin: 0 30% 0 30%;
+    padding: 3% 8% 3% 8%;
+    background-color: rgba(37, 38, 45);
+    margin-top: 5vh;
     display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.login {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
-.mainproductos .descripcion-prod {
-    background-color: rgb(34, 38, 44);
-    border-radius: 15px;
-    padding: 32px;
-    max-width: 400px;
-    text-align: center;
-    margin-bottom: 32px;
+.login input, 
+.login button {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 12px;
+    color: black;
+    margin-top: 5px;
 }
 
-.mainproductos .descripcion-prod img {
+.login label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.login div {
+    margin-bottom: 12px;
+}
+
+.login button {
+    background-color: rgb(61, 61, 61);
+    color: white;
+}
+
+.login button:hover {
+    background-color: #4c5056;
+}
+
+.login input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+/*PRODUCTOS 2*/
+
+.mainproductos2{
+    margin: 13px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.detalleproducto {
+    display: flex;
+    align-items: flex-start;
+}
+
+.fotos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    padding: 5px; 
+    box-sizing: border-box;
+}
+
+.fotos img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    margin: 16px 0;
+    padding: 5px;
 }
 
-.mainproductos .reviews {
-    background-color: rgb(34, 38, 44);
-    padding: 24px;
-    border-radius: 12px;
-    max-width: 400px;
-    text-align: center;
-    color: white;
+.descripcion {
+    max-width: 500px; 
+    margin-left: 20px; 
 }
 
-.mainproductos .review h2 {
-    color: white;
+.descripcion h4 strong{
+    font-weight: bold;
+}
+
+.descripcion h3 strong{
+    font-weight: bold;
+}
+
+.descripcion img{
+    width: 20%;
 }
