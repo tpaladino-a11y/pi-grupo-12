@@ -438,3 +438,69 @@ main .categoriabuzos .productoscategoria img{
 main .masVendidos{
     margin-top: 10vh;
 }
+
+/* SEARCH-RESULTS */
+
+.results-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 16px;
+}
+
+.results-container h2 {
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+
+.result-item {
+  background: #d3d3d3;   
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.result-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 16px;
+  border-radius: 6px;
+}
+
+.result-item h3 {
+  margin: 8px 0;
+  font-size: 19px;
+}
+
+.result-item p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.result-item a {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background: #4c5056;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.result-item a:hover {
+  background: #0041a8;
+}
+
+/* Mensaje de "sin resultados" */
+.no-results {
+  padding: 1rem;
+  background: #ffecec;
+  border: 1px solid #f5c2c2;
+  border-radius: 6px;
+  color: #d8000c;
+  text-align: center;
+}
+
