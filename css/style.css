@@ -511,6 +511,7 @@ main .masVendidos{
 @media (max-width: 420px) {
     /* HEADER */
     header .menu {
+        margin-left: 5%;
         
     }
     header .logo {
