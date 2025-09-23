@@ -393,7 +393,6 @@ main .bannerbuzos{
     text-align: center; 
     font-weight: bold;
     align-content: center;
-    width: 100%;
     padding: 5%;
     color: white;   
     background-image: url("../img/banner4.webp");
@@ -507,3 +506,40 @@ main .masVendidos{
     text-align: center;
 }
 
+/* Responsive */
+
+@media (max-width: 420px) {
+    /* HEADER */
+    header .menu {
+        
+    }
+    header .logo {
+        width: fit-content;
+    }
+    header .logo a{
+        padding-left: 20%;
+        width: fit-content;
+        padding-right: 0;   
+    }
+    header .logo a img{
+        width: fit-content;
+    }
+    header .menu a{
+        font-size: x-small;
+    }   
+    header nav{
+        width: fit-content;
+    }
+    header nav input{
+        width: 65%;
+    }
+    header nav button{
+        width: fit-content;
+    }
+    /* INDEX */
+    main .container .productos{
+    width: 48%;
+}
+
+
+}
