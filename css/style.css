@@ -155,6 +155,8 @@ main .container .productos{
     margin: 1%;
     display: flex;
     flex-direction: column;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 main .container .productos .info{
     display: flex;
@@ -203,6 +205,8 @@ footer{
 
 .bodyregistro {
     background-image: url(../img/bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 } 
 
 .mainregistro h2 {
@@ -279,6 +283,8 @@ footer{
 
 .bodylogin{
     background-image: url(../img/bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 } 
 
 .mainlogin h2 {
@@ -510,9 +516,9 @@ main .masVendidos{
 
 @media (max-width: 420px) {
     /* HEADER */
-    header .menu {
-        margin-left: 5%;
-        
+    header .menu{
+        width: fit-content;
+
     }
     header .logo {
         width: fit-content;
@@ -527,9 +533,11 @@ main .masVendidos{
     }
     header .menu a{
         font-size: x-small;
+        padding-bottom: 0;
     }   
     header nav{
         width: fit-content;
+        margin-left: 5%;
     }
     header nav input{
         width: 65%;
@@ -540,7 +548,40 @@ main .masVendidos{
     /* INDEX */
     main .container .productos{
     width: 48%;
+    }
+    main .categorias ul{
+        width: 70%;
+        height: fit-content;
+    }
+    main .categorias ul li a{
+        font-size: small  ;
+
+    }
+
+    
+    /* Category*/
+    .maincategory .categoriabuzos .productoscategoria{
+        width: 100%;
+    }
+    .maincategory .bannerbuzos{
+        margin-top: 5%;
+    }
+    .maincategory .categoriabuzos {
+        flex-wrap: wrap;
+    }
+    .mainregistro{
+        margin: 10% 10% 0 10%;
+    }
+    .mainlogin{
+        margin: 10% 10% 0 10%;
+    }
+
+    /* FOOTER */
+    footer p{
+        text-align: center;
+    }
 }
 
 
-}
+
+
