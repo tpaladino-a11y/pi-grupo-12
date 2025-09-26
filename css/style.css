@@ -98,7 +98,7 @@ main .categorias ul{
     margin: 2% 1% 2% 1%;
     border-radius: 80px;
     background-color: rgb(228, 228, 228); 
-    width: 20%;
+    width: 40%;
     height: 4vh;
 }
 
@@ -563,7 +563,7 @@ main .masVendidos{
     width: 48%;
     }
     main .categorias ul{
-        width: 70%;
+        width: 100%;
         height: fit-content;
     }
     main .categorias ul li a{
@@ -593,11 +593,7 @@ main .masVendidos{
     footer p{
         text-align: center;
     }
-}
-/* PRODUCTOS2 */
-
-
-@media (max-width: 420px) {
+    /* PRODUCTOS2 */
     .detalleproducto {
         flex-direction: column;
         align-items: center;
@@ -632,5 +628,3 @@ main .masVendidos{
         font-size: 14px;
     }
 }
-
-
