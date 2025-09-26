@@ -205,7 +205,7 @@ footer{
 
 .bodyregistro {
     background-image: url(../img/bg2.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
 } 
 
@@ -283,7 +283,7 @@ footer{
 
 .bodylogin{
     background-image: url(../img/bg2.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
 } 
 
@@ -512,7 +512,16 @@ main .masVendidos{
     text-align: center;
 }
 
-/* Responsive */
+/* FOOTER LOGIN Y REGISTER */
+.footerlogreg{
+  position: fixed;
+  bottom: 0;    
+  left: 0;
+  width: 100%;
+}
+
+
+/* RESPONSVE */
 
 @media (max-width: 420px) {
     /* HEADER */
@@ -581,7 +590,7 @@ main .masVendidos{
         text-align: center;
     }
 }
-    /* Product2 */
+/* PRODUCTOS2 */
 @media (max-width: 768px) {
     .detalleproducto {
         flex-direction: column;
@@ -636,3 +645,5 @@ main .masVendidos{
         font-size: 14px;
     }
 }
+
+
