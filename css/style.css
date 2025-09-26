@@ -603,10 +603,6 @@ main .masVendidos{
         align-items: center;
     }
 
-    .fotos {
-        grid-template-columns: 1fr; 
-        
-    }
     .fotos_responsive{
         display: block;
         width: 100%;
