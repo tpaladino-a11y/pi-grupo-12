@@ -76,9 +76,9 @@ fetch(linkapi)
               <div class="review">
                 <p><strong>⭐ ${review.rating}/5</strong></p>
                 <p>"${review.comment}"</p>
-      <p><em>${review.reviewerName}</em> — ${review.date}</p>
-    </div>
-    <hr>    
+                <p>${review.reviewerName} — ${review.date}</p>
+              </div>
+            <hr>    
         `;
       }
 
