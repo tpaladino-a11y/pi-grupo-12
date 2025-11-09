@@ -364,7 +364,7 @@ footer{
 .fotos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    max-width: 800px;
+    width: 800px;
     padding: 5px; 
     box-sizing: border-box;
 }
@@ -376,7 +376,7 @@ footer{
 }
 
 .descripcion {
-    max-width: 500px; 
+    width: 500px; 
     margin-left: 20px; 
 }
 
@@ -397,6 +397,7 @@ footer{
 
 .categoriabuzos{
     display: flex;
+    flex-wrap: wrap;
 }
 
 main .bannerbuzos{
