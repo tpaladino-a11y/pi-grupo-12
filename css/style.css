@@ -364,7 +364,7 @@ footer{
 .fotos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 800px;
+    width: 50%;
     padding: 5px; 
     box-sizing: border-box;
 }
@@ -376,7 +376,7 @@ footer{
 }
 
 .descripcion {
-    width: 500px; 
+    width: 300px; 
     margin-left: 20px; 
 }
 
