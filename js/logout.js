@@ -1,3 +1,6 @@
+//Este se repite en todos los index menos registro por logica
+
+
 document.addEventListener("DOMContentLoaded", function () {
     let logout = document.querySelector("#logout");
 
