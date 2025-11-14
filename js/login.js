@@ -40,8 +40,8 @@ formularioLogin.addEventListener("submit", function(e){
         e.preventDefault(); 
 
     }else{
-        
-        // Guarda el email en localStorage
+
+        // Guardo el email en localStorage
         localStorage.setItem("usuarioEmail", textoEmailLogin);
     }
 })

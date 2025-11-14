@@ -28,27 +28,34 @@
     <main class="mainregistro">
         <h2>REGISTRO</h2>
         <section class="registro">
-            <form action="index.html" method="get">
+            <form class="formRegistro">
                 <div>
                     <label for="email">Email:</label>
-                    <input type="text" name="email" id="email">
-                </div>
+                    <input class="inputRegistroEmail" type="email" id="email"> 
+                    <!-- El type=email obliga a que haya formato email, es decir un @-->
+                </div> 
+
                 <div>
                     <label for="contraseña">Contraseña:</label>
-                    <input type="password" name="contraseña">
+                    <input class="inputRegistroContra" type="password" id="contraseña">
                 </div>
+
                 <div>
                     <label for="rep-contra">Repetir Contraseña:</label>
-                    <input type="password" name="rep-contra" id="rep-contra">
+                    <input class="inputRepiteContra" type="password" id="rep-contra">
                 </div>
-               <div>
-                    <a href="login.html"><button type="submit">Registrarme</button></a><a href="./login.html"><button type="button">Ya tengo cuenta</button></a>
-                </div>
+
                 <div>
-                    <label for="acep">Acepto terminos y condiciones</label>
-                    <input type="checkbox" name="acep" id="acep" >
+                    <input type="checkbox" class="checkboxAcepto" id="acep">
+                    <label for="acep">Acepto términos y condiciones</label>
                 </div>
-            </form>  
+
+                <div>
+                    <button type="submit">Registrarme</button>
+                    <a href="login.html"><button type="button">Ya tengo cuenta</button></a>
+                </div>
+            </form>
+
         </section>
     </main>
     <footer class="footerlogreg">
