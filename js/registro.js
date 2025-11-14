@@ -42,5 +42,10 @@ formularioRegistro.addEventListener("submit", function(e){
         errorMensaje = "Las contraseñas no coinciden.";
     }
 
-    
+    if (errorMensaje !== "") {
+        e.preventDefault();
+        alert(errorMensaje);
+    } else {
+        localStorage.setItem("usuarioEmail", email);
+    }
 })
