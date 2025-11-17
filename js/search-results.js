@@ -22,3 +22,48 @@ busquedaUsuario = localStorage.getItem("busqueda");
 
 document.querySelector(".textobusqueda").innerHTML = "Resultados de búsqueda para: " + busquedaUsuario
 
+///Recorro la API y si coincide 
+let linkapi = "https://dummyjson.com/products";
+let listaResultados = document.querySelector(".results-container");
+
+fetch(linkapi)
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+
+    let resultados = 0;
+
+    for (let i = 0; i < data.products.length; i++) {
+      let producto = data.products[i];
+
+      /// Paso a minuscula todo 
+      let titulo = producto.title.toLowerCase();
+      let busqueda = busquedaUsuario.toLowerCase();
+
+      if (titulo.includes(busqueda)) {
+
+        resultados += 1; /// Hago el contador para despues si es igual a cero, muestro que no se encontraron resultados.
+
+        listaResultados.innerHTML += `
+          <article class="result-item">
+            <img src="${producto.images[0]}" alt="">
+            <div class="info">
+              <h3>${producto.title}</h3>
+              <p>${producto.description}</p>
+              <p>$${producto.price}</p>
+              <a href="product.html?productoId=${producto.id}">Ver detalle</a>
+            </div>
+          </article>
+        `;
+      }
+    }
+
+    // Si no encontro nada
+    if (resultados === 0) {
+      listaResultados.innerHTML = "No se encontraron resultados para la búsqueda.";
+    }
+  })
+  .catch(function(error) {
+    console.log("El error es: " + error);
+  });
