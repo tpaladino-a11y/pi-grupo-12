@@ -11,16 +11,15 @@ formularioheader.addEventListener("submit", function(e) {
         e.preventDefault();
         alert("Debe ingresar al menos 3 caracteres para realizar la búsqueda.");
     } else {
-        /// Esto me sirve para guardar lo que busco el usuario.
-        localStorage.setItem("busqueda", texto)
+        localStorage.setItem("busqueda", texto);
     }
 });
 
 
-/// Rescato del storage lo que busco el usuario y lo muestro por pantalla.
-busquedaUsuario = localStorage.getItem("busqueda");
+/// Muestro por pantalla lo que busco el usuario
+let busquedaUsuario = localStorage.getItem("busqueda");
+document.querySelector(".textobusqueda").innerHTML = "Resultados de búsqueda para: " + busquedaUsuario;
 
-document.querySelector(".textobusqueda").innerHTML = "Resultados de búsqueda para: " + busquedaUsuario
 
 ///Recorro la API y si coincide 
 let linkapi = "https://dummyjson.com/products";
