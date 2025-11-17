@@ -9,8 +9,12 @@ formularioheader.addEventListener("submit", function(e) {
   if (cantdecaracteres === 0 || cantdecaracteres < 3) {
     e.preventDefault(); 
     alert("Debe ingresar al menos 3 caracteres para realizar la búsqueda.");
-  }
+  }else {
+        /// Esto me sirve para guardar lo que busco el usuario.
+        localStorage.setItem("busqueda", texto)
+    }
 });
+  
 
 /// Tomo la info de la QS
 let queryString = location.search;
