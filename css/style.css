@@ -90,7 +90,13 @@ header .menu a{
 }   
 
 /*MAIN INDEX*/
-
+.bienvenidaQuerry{
+    display: none;
+}
+.bienvenidOriginal{
+    display: flex;
+    align-items: center;
+}
 main .categorias ul{
     display: flex;
     justify-content: space-around;
@@ -559,9 +565,21 @@ main .masVendidos{
     header nav button{
         width: fit-content;
     }
+    #logout{
+        font-size: small;
+    }
     /* INDEX */
+    .bienvenidaQuerry{
+        display: block;
+    }
+    .bienvenidaQuerry p{
+        text-align: center;
+    }
+    .bienvenidOriginal{
+        display: none;
+    }
     main .container .productos{
-    width: 48%;
+        width: 48%;
     }
     main .categorias ul{
         width: 100%;
@@ -628,4 +646,6 @@ main .masVendidos{
     .descripcion h4 {
         font-size: 14px;
     }
+
+    
 }
