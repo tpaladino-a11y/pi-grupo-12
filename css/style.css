@@ -556,7 +556,7 @@ main .masVendidos{
         padding-bottom: 0;
     }   
     header nav{
-        width: fit-content;
+        width: 50%;
         margin-left: 5%;
     }
     header nav input{
