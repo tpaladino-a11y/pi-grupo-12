@@ -16,7 +16,7 @@ formularioheader.addEventListener("submit", function(e) {
 });
 
 
-/// Tomo la info de la QS. La QS ya la prepare desde el index. Le puse de key, prodcutId. Guardo el valor en la variable idProductoSeleccionado
+/// Tomo la info de la QS
 let queryString = location.search;
 let qsObject = new URLSearchParams(queryString);
 let idProductoSeleccionado = qsObject.get("productoId");
@@ -24,9 +24,9 @@ console.log("Producto seleccionado:", idProductoSeleccionado);
 
 
 
-/// PRODUCTOS
-let linkapi = `https://dummyjson.com/products/${idProductoSeleccionado}`; ///Para entrar a la info de el producto que se puso ver detalle, modifico el link de la API dependiendo del ID para entrar directo a la info
-let mainProduct = document.querySelector(".mainproductos2"); ///Le doy nombre de variable al main que dentoe tiene articles, uno con foto, descrpcion y reviews
+/// Productos
+let linkapi = `https://dummyjson.com/products/${idProductoSeleccionado}`;
+let mainProduct = document.querySelector(".mainproductos2");
 
 fetch(linkapi)
   .then(function(response) {
@@ -35,15 +35,12 @@ fetch(linkapi)
   .then(function(producto) {
     console.log(producto);
 
-    ///Voy a hacer variable y luego al final concatenar todo
-    ///Variable con la foto del producto
     let contenidoImg = `
       <article class="fotos">
         <img src="${producto.images[0]}" alt="">
       </article>
     `;
 
-    ///Variable descripcion
     let contenidoDescripcion = `
       <article class="descripcion">
           <h3><strong>${producto.title}</strong></h3>
@@ -64,10 +61,11 @@ fetch(linkapi)
       </article>
     `;
 
-    ///Variable Seccion  reviews
-    let contenidoReviews = ""; ///La arranco en vacio porque voy a recorrer todos los reviews porque hay mas de uno entonces hay que ir sumandolos
+    ///Seccion  reviews
 
-    if (producto.reviews && producto.reviews.length > 0) { ///Si hay reviews entro en el bucle. Atento que abro un section que adentro tiene tods las posibles reviews. Este section lo cierro mas adelante
+    let contenidoReviews = "";
+
+    if (producto.reviews && producto.reviews.length > 0) {
       contenidoReviews += `
         <section class="reviews">
           <h3>Comentarios de usuarios</h3>
@@ -75,7 +73,7 @@ fetch(linkapi)
 
         ///Recorro todo el array que tiene los ratings, asi se hace dinamico por si algun producto tiene distinta cantidad de opiniones
       for (let i = 0; i < producto.reviews.length; i++) {
-        let review = producto.reviews[i]; ///Le doy nombre review y despues con review.loquequieroentrar saco la info que quiero
+        let review = producto.reviews[i];
 
         contenidoReviews += `
               <div class="review">
@@ -87,9 +85,9 @@ fetch(linkapi)
         `;
       }
 
-      contenidoReviews += `</section>`; ///Cierro el section que abri y donde dentro tengo todas las reviews
+      contenidoReviews += `</section>`;
 
-      ///Si no hay reviews se avisa que no hay reviews
+      ///Si no hay reviews...
     } else {
       contenidoReviews = `
         <section class="reviews">

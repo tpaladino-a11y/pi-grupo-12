@@ -1,20 +1,17 @@
-/// HEADER (Mismo en todas las paginas)
-///Lo primero que hago es darle un nombre de variable a distinos objetos de mi HTML
-let formularioheader = document.querySelector(".search"); ///En mi HTML, el formulario que esta dentro del div del header tiene la clase .search
-let inputheader = document.querySelector(".inputheader"); ///Aca tambien agarro y le doy nombre de variable pero solo al input, para luego ver el contenido
+/// Header mismo en todas las paginas
+let formularioheader = document.querySelector(".search");
+let inputheader = document.querySelector(".inputheader");
 let textoBusqueda = document.querySelector(".textobusqueda");
 
-///Aca hago un evento que ocurre cuando se aprieta el boton del formulario que tiene de type submit.
 formularioheader.addEventListener("submit", function(e) {
     let texto = inputheader.value.trim(); 
-    let cantdecaracteres = texto.length; ///Cuento las cantidad de caracteres que tiene el valor que ingreso el usuario en el input
+    let cantdecaracteres = texto.length;
 
-    ///Con un if valido si hay mas de tres caracteres.
     if (cantdecaracteres === 0 || cantdecaracteres < 3) {
-        e.preventDefault(); ///Si entro en el if, lo pirmpero que se hace es cancelar el comportamiento default que es que me lleva a la pagina rtados
-        alert("Debe ingresar al menos 3 caracteres para realizar la búsqueda."); ///Muestro alert.
+        e.preventDefault();
+        alert("Debe ingresar al menos 3 caracteres para realizar la búsqueda.");
     } else {
-        /// Guardo en el localStorage lo que puso para buscar el usurio en el input del header. Luego trabajo con este valor. Y se cambia la pagina a la de reusltados
+        /// Esto me sirve para guardar lo que busco el usuario.
         localStorage.setItem("busqueda", texto)
     }
 });
@@ -22,7 +19,7 @@ formularioheader.addEventListener("submit", function(e) {
 
 /// CATEGORIAS
 let linkapi = "https://dummyjson.com/products";
-let listacategorias = document.querySelector(".listacategorias"); /// Guardo en una variable el div que dentro tiene los a href con nombre de cada seccion
+let listacategorias = document.querySelector(".listacategorias");
 
 fetch(linkapi)
   .then(function(response) {
@@ -31,35 +28,38 @@ fetch(linkapi)
   .then(function(data) {
     console.log(data);
 
-    /// RECORRO TODAS LAS CATEGORIAS Y LAS GUARDO EN UN ARRAY
     let categorias = [];
 
-    for (let i = 0; i < data.products.length; i++) {
-      let categoria = data.products[i].category; /// Hago una variable que se va a actualizar que tiene como valor el tipo de producto
+    /// RECORRO TODAS LAS CATEGORIAS Y LAS GUARDO EN UN ARRAY
 
-      if (!categorias.includes(categoria)) { ///Si no esta en la lista categorias que abti antes, se
+    for (let i = 0; i < data.products.length; i++) {
+      let categoria = data.products[i].category;
+
+      if (!categorias.includes(categoria)) {
         categorias.push(categoria);
       }
     }
 
     console.log("Categorías únicas:", categorias);
 
-    /// PONGO EN MI NAV LOS ELEMENTOS DEL ARRAY. toUpperCase() CONVIERTE EN MAYUSCULA
-    listacategorias.innerHTML = ""; ///Lista categorias arranca sin nada dentro, voy a recorrer la lista que hice e ir agregando aca las secciones.
+    /// PONGO EN MI NAV LOS ELEMENTOS DEL ARRAY. toUpperCase() CONVIERTE EN MAYUSCULA 
 
+    listacategorias.innerHTML = "";
     for (let i = 0; i < categorias.length; i++) {
-      let nombrecategoria = categorias[i]; ///Le doy nombre a cada valor de la lista.
+      let nombrecategoria = categorias[i];
 
       /// Agrego el ?categoria=${nombrecategoria} para poder luego sacar el QS y trabajar con el.
       listacategorias.innerHTML += `
         <nav><li><a href="category.html?categoria=${nombrecategoria}">${nombrecategoria.toUpperCase()}</a></li></nav>
-      `; ///Ahora lo que hago es agregar con un nav y a href y algo importante es que le pongo un QS con categoria= nombre de la categoria para despues
-         ///bajar esa info y trabajar con ella.
+      `;
     }
   })
   .catch(function(error) {
     console.log("El error es: " + error);
   }); 
+
+  
+
 
 
 
@@ -67,7 +67,7 @@ fetch(linkapi)
 
 /// HOME
 let fragancias = document.querySelector(".aleatorio.container");
-let groceries = document.querySelector(".masVendidos.container"); ///Le doy un nombre de variable a los dos section.
+let groceries = document.querySelector(".masVendidos.container");
 
 fetch(linkapi)
   .then(function(response) {
@@ -78,11 +78,11 @@ fetch(linkapi)
 
     // FRAGANCIAS
 
-    let contenidofragancias = "";
-    let contadorFragancias = 0;
+    let contenidofragancias = ""; 
+    let contadorFragancias = 0; 
 
     for (let i = 0; i < data.products.length; i++) {
-      let producto = data.products[i]; ///Por cada i entro en el i de la data. Ahi dentro obtengo todo lo demas con producto.loquequierobuscar
+      let producto = data.products[i];
 
       if (producto.category == "fragrances") {
         contenidofragancias += `
@@ -97,7 +97,7 @@ fetch(linkapi)
         `;
         contadorFragancias += 1;
 
-        if (contadorFragancias == 10) break;
+        if (contadorFragancias == 10) break; 
       }
     }
 
@@ -113,8 +113,8 @@ fetch(linkapi)
 
     // GROCERIES
 
-    let contenidoGroceries = "";
-    let contadorGroceries = 0;
+    let contenidoGroceries = ""; 
+    let contadorGroceries = 0; 
 
     for (let i = 0; i < data.products.length; i++) {
       let producto = data.products[i];
@@ -130,10 +130,10 @@ fetch(linkapi)
               <a href="product.html?productoId=${producto.id}">Ver detalle</a>
             </div>
           </article>
-        `; ///Al ver detalle le agrego una QS que toma como valor el ID del producto.
+        `;
         contadorGroceries+= 1;
 
-        if (contadorGroceries == 10) break;
+        if (contadorGroceries == 10) break; 
       }
     }
 
@@ -147,6 +147,9 @@ fetch(linkapi)
       groceries.innerHTML = bannerGroceries + contenidoGroceries;
     }
   })
+
+
   .catch(function(error) {
     console.log("El error es: " + error);
   });
+
