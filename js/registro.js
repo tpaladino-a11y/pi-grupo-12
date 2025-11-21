@@ -17,18 +17,21 @@ formularioheader.addEventListener("submit", function(e) {
 
 let formularioRegistro = document.querySelector(".formRegistro");
 
+///Le doy nombre de variables a cada input del formulario
+
 let inputEmail = document.querySelector("#emailRegistro");
 let inputContraseña = document.querySelector("#contraseñaRegistro");
 let inputRepContraseña = document.querySelector("#repContraseñaRegistro");
 let checkboxTerminos = document.querySelector("#aceptoTerminos");
 
-formularioRegistro.addEventListener("submit", function(e){
+formularioRegistro.addEventListener("submit", function(e){ ///Cuando se aprieta el boton de submit, se hacen las sigueintes validaciones
+    ///Antes tengo que guardar en otras variaables el valor de lo que se escribe en los inputs
     let email = inputEmail.value.trim();
     let contraseña = inputContraseña.value.trim();
     let repContraseña = inputRepContraseña.value.trim();
 
-    let errorMensaje = "";
-
+    let errorMensaje = ""; ///Esto lo pongo como una especie de contador, si no se cumplen las condiciones de actualiza este mensaje dependiendo de lo que no se cunplio
+    ///Si se cumplen ciertas condiciones, se actualiza el errorMensake
     if (email.length === 0) {
         errorMensaje = "EL campo email esta vacio, porfavor completarlo.";
     }
@@ -45,10 +48,10 @@ formularioRegistro.addEventListener("submit", function(e){
         errorMensaje = "Las contraseñas no coinciden.";
     }
 
-    if (errorMensaje !== "") {
+    if (errorMensaje !== "") { ///Si errorMensaje NO esta vacio, significa que algo no se cumplplio, por ende se cancela el comportamiento default y se muestra una alerta con el error que se actualizo en el mensaje de arriba
         e.preventDefault();
         alert(errorMensaje);
     } else {
-        localStorage.setItem("usuarioEmail", email);
+        localStorage.setItem("usuarioEmail", email); ///Si no hay problemas, guardo el email en el localStorage para usarlo despues
     }
 })

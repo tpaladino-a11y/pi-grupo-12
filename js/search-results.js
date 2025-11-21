@@ -16,7 +16,7 @@ formularioheader.addEventListener("submit", function(e) {
 });
 
 
-/// Muestro por pantalla lo que busco el usuario
+/// Muestro por pantalla lo que busco el usuario. bajo del localstorage lo que guarde del header.
 let busquedaUsuario = localStorage.getItem("busqueda");
 document.querySelector(".textobusqueda").innerHTML = "Resultados de búsqueda para: " + busquedaUsuario;
 
@@ -34,13 +34,13 @@ fetch(linkapi)
     let resultados = 0;
 
     for (let i = 0; i < data.products.length; i++) {
-      let producto = data.products[i];
+      let producto = data.products[i]; ///Esto se repite para a cada elemento de la lista de data tiene de nombre producto.
 
       /// Paso a minuscula todo 
       let titulo = producto.title.toLowerCase();
       let busqueda = busquedaUsuario.toLowerCase();
 
-      if (titulo.includes(busqueda)) {
+      if (titulo.includes(busqueda)) { ///Entro en el id, si lo que se busco esta en el titulo del producto.
 
         resultados += 1; /// Hago el contador para despues si es igual a cero, muestro que no se encontraron resultados.
 
