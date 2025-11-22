@@ -22,12 +22,13 @@ console.log(queryString);
 
 let qsObject = new URLSearchParams(queryString);
 
-let categoriaseleccionada = qsObject.get("categoria")
+let categoriaseleccionada = qsObject.get("categoria").toLowerCase()
+categoriaseleccionadaApi = categoriaseleccionada.replace(/ /g, "-"); ///Se que en mi API, las categorias se escirben con un - entre palabras, por eso agrego el - para despues poder buscar
 console.log(categoriaseleccionada);
 
 
 /// Productos
-let linkapi = "https://dummyjson.com/products";
+let linkapi = "https://dummyjson.com/products?limit=109"  
 let maincategoria = document.querySelector(".maincategory");
 
 
@@ -43,7 +44,7 @@ fetch(linkapi)
     for (let i = 0; i < data.products.length; i++) {
       let producto = data.products[i];
 
-      if (producto.category == categoriaseleccionada) {
+      if (producto.category.includes(categoriaseleccionadaApi)) {
         contenidocategoria += `
           <article class="productoscategoria">
             <img src="${producto.images[0]}" alt="">
@@ -58,13 +59,13 @@ fetch(linkapi)
     }
 
     if (contenidocategoria == "") {
-      maincategoria.innerHTML = `<p>No hay productos de " ${categoriaseleccionada} " disponibles.</p>`;
+      maincategoria.innerHTML = <p>No hay productos de " ${categoriaseleccionada} " disponibles.</p>;
     } else {
       let bannercategoria = `
         <div class="bannerbuzos">
           <h2>${categoriaseleccionada.toUpperCase()}</h2>
         </div>`;
-      maincategoria.innerHTML = bannercategoria + `<section class="categoriabuzos">` + contenidocategoria + `</section>`;
+      maincategoria.innerHTML = bannercategoria + <section class="categoriabuzos"> + contenidocategoria + </section>;
     }
   })
   .catch(function(error) {

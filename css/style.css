@@ -1,4 +1,3 @@
-
 * { 
     box-sizing: border-box; 
     margin: 0;
@@ -23,7 +22,8 @@ body{
 main{
     padding: 0 2.5% 2% 2.5%;
 }
-/*HEADER*/
+
+
 header{
     margin: 2% 2.5% 0 2.5%;
     background-color: rgb(34, 40, 49)  ;
@@ -44,7 +44,9 @@ header .logo a img{
     width: 70px;
     height: 40px;
 }
-
+.item-category{
+    padding: 1vw;
+}
 header nav {
     display: flex;
     align-items: center;    
@@ -89,7 +91,7 @@ header .menu a{
     padding: 2%;
 }   
 
-/*MAIN INDEX*/
+
 .bienvenidaQuerry{
     display: none;
 }
@@ -102,10 +104,12 @@ main .categorias ul{
     justify-content: space-around;
     align-items: center;
     margin: 2% 1% 2% 1%;
-    border-radius: 80px;
+    border-radius: 12px;
     background-color: rgb(228, 228, 228); 
-    width: 40%;
-    height: 4vh;
+    width: 100%;
+    height: 8vh;
+    flex-wrap: wrap;
+    font-size: small;
 }
 
 main .categorias ul li a{
@@ -196,7 +200,8 @@ main .masVendidos{
     margin-top: 10vh;
 }
 
-/*REGISTRO*/
+
+
 
 
 footer{
@@ -207,7 +212,6 @@ footer{
     align-items: center;
 }
 
-/*REGISTRO*/
 
 .bodyregistro {
     background-image: url(../img/bg2.png);
@@ -273,7 +277,7 @@ footer{
     margin-right: 5px;
 }
 
-/* PRODUCTOS */
+
 
 footer{
     background-color: rgb(34, 40, 49) ;
@@ -285,7 +289,7 @@ footer{
 
 
 
-/*LOGIN 2*/
+
 
 .bodylogin{
     background-image: url(../img/bg2.png);
@@ -350,8 +354,6 @@ footer{
     width: auto;
     margin-right: 5px;
 }
-
-/*PRODUCTOS 2*/
 
 .mainproductos2{
     margin: 13px;
@@ -529,6 +531,13 @@ main .masVendidos{
   bottom: 0;    
   left: 0;
   width: 100%;
+}
+.main-search .bienvenida{
+    display: none;
+}
+
+.mainproductos2 .bienvenida{
+    display: none;
 }
 
 

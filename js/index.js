@@ -18,10 +18,11 @@ formularioheader.addEventListener("submit", function(e) {
 
 
 /// CATEGORIAS
-let linkapi = "https://dummyjson.com/products";
+let linkapi = "https://dummyjson.com/products?limit=109";
+let linkapiCat = "https://dummyjson.com/products/categories";
 let listacategorias = document.querySelector(".listacategorias");
 
-fetch(linkapi)
+fetch(linkapiCat)
   .then(function(response) {
     return response.json();
   })
@@ -32,12 +33,10 @@ fetch(linkapi)
 
     /// RECORRO TODAS LAS CATEGORIAS Y LAS GUARDO EN UN ARRAY
 
-    for (let i = 0; i < data.products.length; i++) {
-      let categoria = data.products[i].category;
-
-      if (!categorias.includes(categoria)) {
-        categorias.push(categoria);
-      }
+    for (let i = 0; i < data.length; i++) {
+      let categoria = data[i].name;
+      categorias.push(categoria);
+      
     }
 
     console.log("Categorías únicas:", categorias);
@@ -50,7 +49,7 @@ fetch(linkapi)
 
       /// Agrego el ?categoria=${nombrecategoria} para poder luego sacar el QS y trabajar con el.
       listacategorias.innerHTML += `
-        <nav><li><a href="category.html?categoria=${nombrecategoria}">${nombrecategoria.toUpperCase()}</a></li></nav>
+        <nav><li><a href="category.html?categoria=${nombrecategoria}" class = "item-category">${nombrecategoria.toUpperCase()}</a></li></nav>
       `;
     }
   })
@@ -152,4 +151,3 @@ fetch(linkapi)
   .catch(function(error) {
     console.log("El error es: " + error);
   });
-

@@ -11,19 +11,18 @@ formularioheader.addEventListener("submit", function(e) {
         e.preventDefault();
         alert("Debe ingresar al menos 3 caracteres para realizar la búsqueda.");
     } else {
-        /// Esto me sirve para guardar lo que busco el usuario.
-        localStorage.setItem("busqueda", texto)
+        localStorage.setItem("busqueda", texto);
     }
 });
 
 
-/// Rescato del storage lo que busco el usuario y lo muestro por pantalla.
-busquedaUsuario = localStorage.getItem("busqueda");
+/// Muestro por pantalla lo que busco el usuario
+let busquedaUsuario = localStorage.getItem("busqueda");
+document.querySelector(".textobusqueda").innerHTML = "Resultados de búsqueda para: " + busquedaUsuario;
 
-document.querySelector(".textobusqueda").innerHTML = "Resultados de búsqueda para: " + busquedaUsuario
 
 ///Recorro la API y si coincide 
-let linkapi = "https://dummyjson.com/products";
+let linkapi = "https://dummyjson.com/products/search?q=" + busquedaUsuario; ///Entro al endpoint que solo contiene la info del producto que busco
 let listaResultados = document.querySelector(".results-container");
 
 fetch(linkapi)
@@ -31,32 +30,29 @@ fetch(linkapi)
     return response.json();
   })
   .then(function(data) {
+    console.log(data);
+    
 
-    let resultados = 0;
+    let resultados = 0;/// Hago el contador para despues si es igual a cero, muestro que no se encontraron resultados.
 
-    for (let i = 0; i < data.products.length; i++) {
+    for (let i = 0; i < data.products.length; i++) { ///Como ya cambie el endpoint antes, no hace falta filtrar los elementos de la lista, ya estan filtrados con el endpoit
       let producto = data.products[i];
 
-      /// Paso a minuscula todo 
-      let titulo = producto.title.toLowerCase();
-      let busqueda = busquedaUsuario.toLowerCase();
+  
+      resultados += 1;
 
-      if (titulo.includes(busqueda)) {
-
-        resultados += 1; /// Hago el contador para despues si es igual a cero, muestro que no se encontraron resultados.
-
-        listaResultados.innerHTML += `
-          <article class="result-item">
-            <img src="${producto.images[0]}" alt="">
-            <div class="info">
-              <h3>${producto.title}</h3>
-              <p>${producto.description}</p>
-              <p>$${producto.price}</p>
-              <a href="product.html?productoId=${producto.id}">Ver detalle</a>
-            </div>
-          </article>
-        `;
-      }
+      listaResultados.innerHTML += `
+        <article class="result-item">
+          <img src="${producto.images[0]}" alt="">
+          <div class="info">
+            <h3>${producto.title}</h3>
+            <p>${producto.description}</p>
+            <p>$${producto.price}</p>
+            <a href="product.html?productoId=${producto.id}">Ver detalle</a>
+          </div>
+        </article>
+      `;
+      
     }
 
     // Si no encontro nada

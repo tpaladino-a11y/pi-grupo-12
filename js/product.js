@@ -51,7 +51,7 @@ fetch(linkapi)
           <br>
           <p>${producto.description}</p>
           <br>
-          <p><strong>Categoría:</strong> ${producto.category}</p>
+          <p><strong>Categoría:</strong><a href="category.html?categoria=${producto.category}"> ${producto.category}</p>
           <br>
           <p><strong>Precio:</strong> $${producto.price}</p> 
           <br>
