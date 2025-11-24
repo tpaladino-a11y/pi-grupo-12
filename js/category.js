@@ -59,13 +59,13 @@ fetch(linkapi)
     }
 
     if (contenidocategoria == "") {
-      maincategoria.innerHTML = <p>No hay productos de " ${categoriaseleccionada} " disponibles.</p>;
+      maincategoria.innerHTML = `<p>No hay productos de " ${categoriaseleccionada} " disponibles.</p>`;
     } else {
       let bannercategoria = `
         <div class="bannerbuzos">
           <h2>${categoriaseleccionada.toUpperCase()}</h2>
         </div>`;
-      maincategoria.innerHTML = bannercategoria + <section class="categoriabuzos"> + contenidocategoria + </section>;
+      maincategoria.innerHTML = bannercategoria + `<section class="categoriabuzos">` + contenidocategoria + `</section>`;
     }
   })
   .catch(function(error) {

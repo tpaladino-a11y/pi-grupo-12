@@ -49,7 +49,7 @@ fetch(linkapiCat)
 
       /// Agrego el ?categoria=${nombrecategoria} para poder luego sacar el QS y trabajar con el.
       listacategorias.innerHTML += `
-        <nav><li><a href="category.html?categoria=${nombrecategoria}" class = "item-category">${nombrecategoria.toUpperCase()}</a></li></nav>
+        <nav><li><a href="category.html?categoria=${nombrecategoria}">${nombrecategoria.toUpperCase()}</a></li></nav>
       `;
     }
   })
@@ -151,3 +151,4 @@ fetch(linkapi)
   .catch(function(error) {
     console.log("El error es: " + error);
   });
+
